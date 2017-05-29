@@ -32,7 +32,8 @@ class Form extends Component {
 
         <div>
           <label htmlFor="toUnit">To</label>
-          <select name="toUnit" id="toUnit" className="unit" onChange={(e) => this.handleChange(e) }>
+          <select name="toUnit" id="toUnit" className="unit" value={this.props.form.toUnit} onChange={(e) => this.handleChange(e) }>
+            <option>-- Please Select --</option>
             <option value="acres">Acres</option>
             <option value="squareFeet">Square Feet</option>
             <option value="squareMeters">Square Meters</option>

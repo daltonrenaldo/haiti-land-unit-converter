@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -30,9 +34,6 @@ form div {
 
 input, select {
   width: 200px;
-}
-
-input {
   padding: 10px;
 }
 
@@ -60,6 +61,10 @@ select {
     display: inline-block;
     width: 100px;
     font-weight: bold;
+  }
+
+  form div {
+    margin-bottom: 10px;
   }
 }
 
