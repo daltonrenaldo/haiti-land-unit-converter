@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 
 class Result extends Component {
   render() {
-    var resultString = '';
+    var resultHTML = <div></div>;
     if (this.props.form.number != null && this.props.form.number != '') {
-      resultString = `result is: ${this.props.form.number} ${this.props.form.fromUnit} = ${this.props.result} ${this.props.form.toUnit}`
+      resultHTML = <span className="result">
+                      <span>{this.props.form.number} {this.props.form.fromUnit} = </span>
+                      <span className='converted'>{this.props.result} {this.props.form.toUnit}</span>
+                    </span>
     }
-    return (
-      <label>{resultString}</label>
-    )
+    return resultHTML;
   }
 }
 

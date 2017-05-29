@@ -50,7 +50,8 @@ class App extends Component {
   }
 
   convert(value, fromUnit, toUnit) {
-    return value * this.ratios[fromUnit][toUnit]
+    var rawResult = value * this.ratios[fromUnit][toUnit];
+    return parseFloat(Math.round(rawResult * 100) / 100).toFixed(2)
   }
 
   render() {
